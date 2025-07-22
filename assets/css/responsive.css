@@ -1,0 +1,409 @@
+/*PC*/
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/*Tablet & mobile*/
+@media (max-width: 991.98px) {
+  /*1. Hide navbar on tablet and mobile*/
+  .navbar {
+    display: none;
+  }
+  /*2. Move logo to the middle*/
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 42%;
+    translate: (-50%, -50%);
+  }
+
+  .action {
+    position: absolute;
+    right: 0.5px;
+    top: -7px;
+  }
+
+  .header__action--login {
+    margin-right: 0px;
+  }
+
+  /*3. Adjust menu bar's position*/
+  .menu-header__icon {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    color: #fff;
+    width: 28px;
+  }
+
+  /*4. Overlay*/
+  .menu-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    inset: 0;
+    z-index: 1;
+    /*in normal condition, hide overlay*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  /*5. If menu-checkbox is checked, overlay appears*/
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /*6. Code for the menu drawer*/
+  .menu-drawer {
+    position: fixed;
+    padding: 60px;
+    background: rgba(204, 202, 219, 0.845);
+    inset: 0 55% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+  }
+
+  /*7. If menu checkbox is checked, menu appears*/
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  /*8. Menu top*/
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+
+  .navbar__link {
+    display: block;
+    font-size: 1.8rem;
+    margin-top: 25px;
+    color: rgb(39, 73, 127);
+    font-weight: 450;
+    padding: 14px 0;
+  }
+
+  .navbar__link:hover {
+    background: #225b8aea;
+  }
+
+  .navbar__link--active {
+    text-decoration: underline;
+  }
+
+  /*9. Change hero-part structure*/
+  .hero {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  .hero__content {
+    order: 2;
+    width: 90%;
+    text-align: center;
+    margin: 22px auto;
+  }
+
+  .hero__heading,
+  .hero__desc {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .hero__media {
+    order: 1;
+  }
+
+  .hero__row {
+    justify-content: center;
+  }
+
+  /*10. Change service-part structure*/
+  .service__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .service__img {
+    width: 100%;
+  }
+
+  .service__list {
+    text-align: center;
+  }
+
+  .service__item {
+    width: 80%;
+    text-align: start;
+  }
+
+  /*11. Change work-part's structure*/
+  .work__list {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+
+  /*12. Change about-part*/
+  .about {
+    margin-top: 80px;
+    padding: 40px 0 150px;
+  }
+
+  .about-row {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .about__img--small {
+    display: none;
+  }
+
+  .about__media {
+    width: 100%;
+  }
+
+  .about__img--large {
+    width: 100%;
+    margin: 25px auto;
+  }
+
+  .about__content {
+    width: 85%;
+    text-align: center;
+  }
+
+  /*13. Change team-list part*/
+  .team__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  .team-item__img-thumb {
+    margin: 0 auto;
+  }
+
+  /*14. Change install-part*/
+  .instal__img {
+    display: none;
+  }
+
+  .install__content {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  /*15. Change blog-part*/
+  .blog__inner {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .blog__list {
+    order: 1;
+  }
+
+  .blog__content {
+    order: 2;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .blog__heading {
+    max-width: 90%;
+  }
+
+  /*16. Change appointment part*/
+  .appointment__inner {
+    padding: 80px 80px;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer-hidden-tablet {
+    display: none;
+  }
+
+  .footer__top {
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
+
+  .show-on-mobile {
+    display: none;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767.98px) {
+  .section-heading {
+    font-size: 3.8rem;
+  }
+
+  .section-desc {
+    font-size: 1.6rem;
+  }
+
+  .header .action {
+    display: none;
+  }
+
+  .menu-header__icon {
+    top: 30px;
+    width: 24px;
+  }
+
+  .menu-drawer {
+    padding: 35px;
+    inset: 0 30% 0 0;
+  }
+
+  .navbar__item {
+    list-style-type: none;
+  }
+
+  .separate {
+    border-top: 1.5px solid #79768d;
+    margin-top: 10px;
+  }
+
+  .show-on-mobile .navbar__link--login {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #2064a4;
+    border-radius: 130px;
+    border: 1px solid #fff;
+    padding: 8px 22px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 18px;
+    line-height: 1.67;
+    font-weight: 600;
+  }
+
+  .show-on-mobile .navbar__link--signup {
+    color: #fff;
+    margin-top: 18px;
+    padding: 8px 18px;
+    display: inline-block;
+    background: #2e80ce;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    border-radius: 130px;
+    font-weight: 600;
+  }
+
+  .hero__heading {
+    font-size: 3.8rem;
+  }
+
+  .hero__img--small {
+    display: none;
+  }
+
+  .hero__img--large {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero__desc {
+    font-size: 1.6rem;
+  }
+
+  .hero__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .service {
+    padding: 80px 0;
+  }
+
+  .section-desc {
+    width: 95%;
+  }
+
+  .service__img {
+    height: auto;
+  }
+
+  .work__desc {
+    width: 100%;
+  }
+
+  .work-item {
+    padding: 20px;
+  }
+
+  .about {
+    margin-top: 20px;
+    padding: 40px 0;
+  }
+
+  .team__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .install__inner {
+    margin: 40px 0;
+    padding: 0 8px;
+  }
+
+  .install__content {
+    min-width: 250px;
+  }
+
+  .install__desc {
+    font-size: 1.5rem;
+  }
+
+  .blog__list {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+
+  .blog__heading {
+    text-align: center;
+  }
+
+  .appointment {
+    margin-top: 60px;
+  }
+
+  .appointment__inner {
+    padding: 30px 5px;
+  }
+
+  .footer {
+    margin-top: 120px;
+    padding-top: 60px;
+  }
+
+  .footer__top {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+
+  .footer__copyright {
+    margin-top: 30px;
+  }
+}
