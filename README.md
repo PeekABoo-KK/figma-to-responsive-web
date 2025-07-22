@@ -15,16 +15,16 @@ You can view the deployed website via GitHub Pages:
 
 ## 📁 Project Structure
 
-index.html
-assets/
-├── css/
-│ ├── reset.css # Reset styles for cross-browser consistency
-│ ├── style.css # Main styles for layout and design
-│ └── responsive.css # Media queries for responsiveness
-├── img/ # All design-related images
-├── icon/ # Icons (e.g., SVGs, PNGs)
-└── favicon/ # Favicon and related files
-
+- `index.html`: Main HTML file.
+- `assets/`
+  - `css/`
+    - `reset.css`: Reset styles for cross-browser consistency.
+    - `style.css`: Main styles for layout and design.
+    - `responsive.css`: Media queries for responsiveness.
+  - `img/`: All images used in the project.
+  - `icon/`: Icon files (SVG/PNG).
+  - `favicon/`: Favicon and related files for browser tabs.
+    
 ## 🚀 How to Run This Project
 
 1. **Clone the repository:**
